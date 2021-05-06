@@ -12,3 +12,7 @@ a {
 #main {
     display: flex;
 }
+
+#content {
+    display: flex;
+}

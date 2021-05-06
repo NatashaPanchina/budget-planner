@@ -1,29 +1,25 @@
 import React from "react";
 import Header from "./header/Header.js";
 import Menu from "./menu/Menu.js";
-import Home from "./home/Home.js";
+import Routes from "./routes/Routes.js";
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Switch
 } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Header />
-      
-     <Router>
-      <Menu />
-       <div id="main">
-         <Switch>
-           <Route path="/">
-             <Home />
-           </Route>
-         </Switch>
-        </div>
-     </Router>
+      <Header />    
+      <div id="content"> 
+        <Router>
+        <Menu />  
+          <Switch>
+            <Routes/>
+          </Switch>
+      </Router>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,14 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 export default function Home() {
     return (
-        <div>Home</div>
+        <ul id="HomeMenu" >
+            <li>
+                <NavLink exact to="/" activeClassName="active">
+                About
+                </NavLink>
+            </li>
+        </ul>
     )
 }

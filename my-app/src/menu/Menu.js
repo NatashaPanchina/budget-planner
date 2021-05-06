@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import "./Menu.css";
+import Home from "../home/Home.js";
 import Income from "../income/Income.js";
 import HouseholdBills from "../house/HouseholdBills.js";
 import Groceries from "../groceries/Groceries.js";
@@ -13,6 +14,7 @@ export default function Menu() {
 
     function handleClick(event){  
         let a = event.target;
+      
         if (a.nextElementSibling.className === "none") {
             a.nextElementSibling.classList.remove('none');
         } else {
@@ -21,68 +23,90 @@ export default function Menu() {
     }
 
     return (
-        <nav id="Menu">
-            <div>
-                <NavLink exact to="/" 
-                activeClassName="selected">Welcome</NavLink>
-            </div>
-            <div>
-                <NavLink exact to="/income"
-                activeClassName="selected" onClick={event => handleClick(event)}>
+        <div><ul id="Menu">
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/$/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
+                    Welcome
+                </NavLink>
+                <Home/>
+            </li>
+            <li>
+                <NavLink exact to="#!"
+                    isActive={() => /^\/income/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Income
                 </NavLink>
                 <Income /> 
-            </div>
-            <div>
-                <NavLink exact to="/house"
-                activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/house/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Household bills
                 </NavLink>
                 <HouseholdBills />
-            </div>
-            <div>
-                <NavLink exact to="/finance"
-                    activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/finance/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Finance and Insurance
                 </NavLink>
                 <FinanceAndInsurance />
-            </div>
-            <div>
-                <NavLink exact to="/groceries"
-                    activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/groceries/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Groceries
                 </NavLink>
                 <Groceries />
-            </div>
-            <div>
-                <NavLink exact to="/entertainment"
-                    activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/entertainment/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Entertainment
                 </NavLink>
                 <Entertainment />
-            </div>
-            <div>
-                <NavLink exact to="/transport"
-                    activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/transport/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Transport
                 </NavLink>
                 <Transport />
-            </div>
-            <div>
-                <NavLink exact to="/family"
-                    activeClassName="selected" onClick={event => handleClick(event)}>
+            </li>
+            <li>
+                <NavLink exact to="#!"  
+                    isActive={() => /^\/family/.test(window.location.pathname) }
+                    onClick={event => handleClick(event)}
+                    activeClassName="selected">
                         Family and Friends
                 </NavLink>
                 <FamilyAndFriends />
-            </div>
-            <div>
-                <NavLink exact to="/other"
-                    activeClassName="selected">Others</NavLink>
-            </div>
-            <div>
-                <NavLink exact to="/summary"
-                activeClassName="selected">Summary</NavLink>
-            </div>
-        </nav>
+            </li>
+            <li>
+                <NavLink exact to="/other" activeClassName="selected" >
+                    Others
+                </NavLink>
+            </li>
+            <li>
+                <NavLink exact to="/summary" activeClassName="selected" >
+                    Summary
+                </NavLink>
+            </li>
+        </ul></div>
     )
 }
+
