@@ -12,14 +12,14 @@ function App() {
   return (
     <div>
       <Header />    
-      <div id="content"> 
-        <Router>
-        <Menu />  
-          <Switch>
-            <Routes/>
-          </Switch>
-      </Router>
-      </div>
+        <div id="content">
+          <Router>
+          <Menu />
+            <Switch>
+              <Routes/>
+            </Switch>
+        </Router>
+        </div>
     </div>
   );
 }

@@ -3,7 +3,12 @@ import React from "react";
 export default function Other() {
     return (
         <div>
-            other
+        <label> <input type="text" value="0/0"></input></label><br></br>
+        <label> <input type="text" value="0/0"></input></label><br></br>
+        <label> <input type="text" value="0/0"></input></label><br></br>
+        <label> <input type="text" value="0/0"></input></label><br></br>
+        <label> <input type="text" value="0/0"></input></label><br></br>
+
         </div>
     )
 }
