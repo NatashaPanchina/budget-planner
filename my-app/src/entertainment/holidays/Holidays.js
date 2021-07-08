@@ -1,9 +1,11 @@
 import React from "react";
+import RenderInputs from "../../content/RenderInputs.js";
 
 export default function Holidays() {
-    return (
-        <div>
-            Holidays
-        </div>
-    )
+    let names = [
+        "Holidays",
+        "Travel insurance",
+        "Spending money"
+    ];
+    return <RenderInputs names={names} title="Holidays"/>
 }

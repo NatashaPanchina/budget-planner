@@ -1,8 +1,12 @@
 import React from "react";
+import RenderInputs from "../../content/RenderInputs.js";
 
 export default function Pension() {
-    return (
-        <div>pension
-        </div>
-    )
+    let names = [
+        "State Pension",
+        "Workplace Pension",
+        "Private pension or annuity",
+        "Pension Credit"
+    ];
+    return <RenderInputs names={names} title="Pension"/>
 }

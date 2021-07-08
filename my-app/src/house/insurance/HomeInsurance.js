@@ -1,9 +1,10 @@
 import React from "react";
+import RenderInputs from "../../content/RenderInputs.js";
 
 export default function HomeInsurance() {
-    return (
-        <div>
-            HomeInsurance
-        </div>
-    )
+    let names = [
+        "Buildings insurance",
+        "Contents insurance"
+    ];
+    return <RenderInputs names={names} title="Home insurance"/>
 }

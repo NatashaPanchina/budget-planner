@@ -9,10 +9,12 @@ a {
     text-decoration: none;
 }
 
-#main {
-    display: flex;
+#content {
+    display: flex; 
 }
 
-#content {
-    display: flex;
+#infoContainer{
+   width: 100%;
+   margin-left: 280px;
 }
+

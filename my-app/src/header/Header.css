@@ -1,8 +1,14 @@
-#header {
+#header div{
     display: flex;
     background-color: #117058;
     font-weight: 450;
     box-sizing: border-box;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 #logo, #login {
@@ -29,8 +35,8 @@
 }
 
 #logo {
-    font-family: 'Impact', Charcoal, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight:bolder;
     align-items: center;
-    width: 15%;
+    width: 30%;
 }

@@ -22,91 +22,65 @@ export default function Menu() {
         }
     }
 
+    function renderNavLink(url, name) {
+        return (
+            <NavLink exact to="#!"
+                isActive={() => url.test(window.location.pathname) }
+                onClick={event => handleClick(event)}
+                className="topic"
+                activeClassName="selected">
+                    {name}
+            </NavLink>
+        )
+    }
+
     return (
-        <div><ul id="Menu">
+        <div id="menu_wrapper">
+            <ul id="Menu">
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/$/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                    Welcome
-                </NavLink>
+                { renderNavLink(/^\/$/, "Welcome") }
                 <Home/>
             </li>
             <li>
-                <NavLink exact to="#!"
-                    isActive={() => /^\/income/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Income
-                </NavLink>
+                { renderNavLink(/^\/income/, "Income") }
                 <Income /> 
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/house/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Household bills
-                </NavLink>
+                { renderNavLink(/^\/house/, "Household bills") }
                 <HouseholdBills />
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/finance/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Finance and Insurance
-                </NavLink>
+                { renderNavLink(/^\/finance/, "Finance and Insurance") }
                 <FinanceAndInsurance />
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/groceries/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Groceries
-                </NavLink>
+                { renderNavLink(/^\/groceries/, "Groceries") }
                 <Groceries />
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/entertainment/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Entertainment
-                </NavLink>
+                { renderNavLink(/^\/entertainment/, "Entertainment") }
                 <Entertainment />
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/transport/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Transport
-                </NavLink>
+                { renderNavLink(/^\/transport/, "Transport") }
                 <Transport />
             </li>
             <li>
-                <NavLink exact to="#!"  
-                    isActive={() => /^\/family/.test(window.location.pathname) }
-                    onClick={event => handleClick(event)}
-                    activeClassName="selected">
-                        Family and Friends
-                </NavLink>
+                { renderNavLink(/^\/family/, "Family and Friends") }
                 <FamilyAndFriends />
             </li>
             <li>
-                <NavLink exact to="/other" activeClassName="selected" >
+                <NavLink exact to="/other" className="topic" activeClassName="selected" >
                     Others
                 </NavLink>
             </li>
             <li>
-                <NavLink exact to="/summary" activeClassName="selected" >
+                <NavLink exact to="/summary" className="topic" activeClassName="selected" >
                     Summary
                 </NavLink>
             </li>
-        </ul></div>
+        </ul>
+        </div>
     )
 }
 

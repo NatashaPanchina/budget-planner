@@ -1,0 +1,43 @@
+.income_title {
+    display: inline;
+    float: left;
+    width: 55%;
+}
+
+.income_value {
+    display: inline;
+    width: 200px;
+}
+
+.income_inputs {
+    background-color: #d4f3e9;
+    border-radius: 5px;
+    margin: 0.75rem 0.75rem 0.4em;
+    padding: 1.125rem;
+    font-weight: 350;
+}
+
+select {
+    width: 20%;
+}
+
+#number { 
+    width: 15%;
+}
+
+input, select {
+    height: 20px;
+    border: 1px solid #dfe6e4;
+}
+
+fieldset {
+    border: none;
+    margin-top: 10px;
+}
+
+legend {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+

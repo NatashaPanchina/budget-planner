@@ -1,9 +1,9 @@
 import React from "react";
+import RenderInputs from "../../content/RenderInputs.js";
 
 export default function Repayment() {
-    return (
-        <div>
-            Repayment
-        </div>
-    )
+    let names = [
+        "Loan repayment to family/friend"
+    ];
+    return <RenderInputs names={names} title="Repayment"/>
 }
