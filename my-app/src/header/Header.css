@@ -1,0 +1,36 @@
+#header {
+    display: flex;
+    background-color: #117058;
+    font-weight: 450;
+    box-sizing: border-box;
+}
+
+#logo, #login {
+    padding: 10px;
+    font-size: 15px;
+    display: flex;
+}
+
+#login {
+   padding: 10px;
+    width: 85%;
+   justify-content: flex-end;
+}
+
+#signin, #signup {
+    border: 1px solid #d7fff2;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#header a {
+    color: white;
+}
+
+#logo {
+    font-family: 'Impact', Charcoal, sans-serif;
+    font-size: 20px;
+    align-items: center;
+    width: 15%;
+}
